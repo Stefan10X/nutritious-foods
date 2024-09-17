@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for nutitious-foods on 2024-09-17T19:09:35+03:00
+# fly.toml app configuration file generated for nutritiousfoods on 2024-09-17T22:29:16+03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'nutitious-foods'
+app = 'nutritiousfoods'
 primary_region = 'otp'
 
 [build]
@@ -24,6 +24,4 @@ primary_region = 'otp'
   processes = ['app']
 
 [[vm]]
-  memory = '1gb'
-  cpu_kind = 'shared'
-  cpus = 1
+  size = 'shared-cpu-1x'
