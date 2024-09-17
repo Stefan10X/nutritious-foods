@@ -11,7 +11,7 @@ primary_region = 'otp'
 
 [env]
   ASPNETCORE_URLS="http://+:8080"
-  StripeSettings__PublicKey="pk_test_51P72VlH7ZjwzHUuVz2C5qyKIRKR0ThbSLSLI7QXaXCnCg4XCpemDobHCCm99PiX5lB2fxYSwIwrOdB0eSbnraspv00sU0i9t7H"
+  StripeSettings__PublishableKey="pk_test_51P72VlH7ZjwzHUuVz2C5qyKIRKR0ThbSLSLI7QXaXCnCg4XCpemDobHCCm99PiX5lB2fxYSwIwrOdB0eSbnraspv00sU0i9t7H"
   Cloudinary__ApiKey="519318143154366"
   Cloudinary__CloudName="dkfycb6n1"
 
