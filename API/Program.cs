@@ -44,6 +44,7 @@ builder.Services.AddSwaggerGen(c =>
     );
 });
 
+//pentru fly io
 string connString;
 if (builder.Environment.IsDevelopment())
     connString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -72,7 +73,13 @@ builder.Services.AddDbContext<StoreContext>(opt =>
     opt.UseNpgsql(connString);
 });
 
-builder.Services.AddCors();
+// //Pentru ca sa vad baza de date local
+// builder.Services.AddDbContext<StoreContext>(opt =>
+// {
+//     opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+// });
+
+// builder.Services.AddCors();
 
 //login
 builder
