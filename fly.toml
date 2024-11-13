@@ -1,0 +1,27 @@
+# fly.toml app configuration file generated for nutritious-foods on 2024-09-17T22:35:20+03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'nutritious-foods'
+primary_region = 'otp'
+
+[build]
+  image = 'stefan107/nutritiousfoods:latest'
+
+[env]
+  ASPNETCORE_URLS="http://+:8080"
+  StripeSettings__PublishableKey="pk_test_51P72VlH7ZjwzHUuVz2C5qyKIRKR0ThbSLSLI7QXaXCnCg4XCpemDobHCCm99PiX5lB2fxYSwIwrOdB0eSbnraspv00sU0i9t7H"
+  Cloudinary__ApiKey="519318143154366"
+  Cloudinary__CloudName="dkfycb6n1"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  size = 'shared-cpu-1x'
